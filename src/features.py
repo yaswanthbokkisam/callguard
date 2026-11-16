@@ -21,7 +21,7 @@ def repeat_score(transcript):
     repeats = 0
     for i in range(1, len(turns)):
         for j in range(i):
-            if same_words(turns[i], turns[j]) >= 0.6:
+            if same_words(turns[i], turns[j]) >= 0.4:
                 repeats += 1
                 break
     return repeats
