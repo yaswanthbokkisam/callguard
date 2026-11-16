@@ -35,12 +35,21 @@ REFUSALS = [
     "We don't have anything like that right now.",
     "Unfortunately that is not available.",
 ]
-
 NOT_AVAILABLE = [
     "Sorry, that is not available.",
     "Still not available.",
     "We have nothing open.",
     "No, I already told you that is not possible.",
+    "We are fully reserved this week.",
+    "I cannot fit anyone in right now.",
+    "That item is out of stock.",
+    "We stopped offering that.",
+    "The schedule is packed until next month.",
+    "Nothing left for that day.",
+    "We do not have that option.",
+    "I am afraid we cannot do that.",
+    "There are no spots left.",
+    "That service is paused at the moment.",
 ]
 
 REPEAT_ASKS = [
