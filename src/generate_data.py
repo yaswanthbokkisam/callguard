@@ -83,6 +83,14 @@ FRUSTRATED = [
     "You are not helping. Can I speak to a real person?",
     "Forget it, put someone else on the line.",
     "This is ridiculous, I want a human.",
+    "I've had enough. Connect me with a manager.",
+    "This conversation is going nowhere.",
+    "I'm losing patience. Please get someone else.",
+    "This has been a terrible experience.",
+    "I am very unhappy with this service.",
+    "We are not making progress. Transfer me to a supervisor.",
+    "I do not want to continue this call.",
+    "This should not be so difficult.",
 ]
 
 GOOD_REPLIES = [
@@ -95,6 +103,21 @@ GOODBYES = [
     "Great, thank you, goodbye.",
     "Perfect, thanks a lot, bye.",
     "Wonderful, have a good day.",
+]
+
+NORMAL_FOLLOW_UPS = [
+    "Can you please confirm the time?",
+    "Could you check that the details are correct?",
+    "Please tell me what happens next.",
+    "Can you confirm the booking for me?",
+    "Could you please repeat the confirmation?",
+]
+
+NORMAL_CONFIRMATIONS = [
+    "Yes, everything is confirmed.",
+    "The details are correct.",
+    "You are all set.",
+    "Yes, the booking is complete.",
 ]
 
 
@@ -130,6 +153,11 @@ def build_call(scenario, failure):
         lines.append("Agent: Perfect, I have those details. Thank you, goodbye.")
     else:
         lines.append(f"{business}: {random.choice(GOOD_REPLIES)}")
+
+        if random.random() < 0.70:
+            lines.append("Agent: " + random.choice(NORMAL_FOLLOW_UPS))
+            lines.append(f"{business}: {random.choice(NORMAL_CONFIRMATIONS)}")
+
         lines.append("Agent: " + random.choice(GOODBYES))
 
     return " ".join(lines)

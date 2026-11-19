@@ -1,5 +1,6 @@
-pandas
+joblib
 numpy
+pandas
 scikit-learn
-matplotlib
-jupyter
+scipy
+streamlit
